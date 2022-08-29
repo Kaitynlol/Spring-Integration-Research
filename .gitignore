@@ -1,0 +1,65 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+out
+*.iml
+*.iws
+*.ipr
+
+# Maven
+log/
+target/
+
+# Gradle
+.gradle
+build/
+/*/build/
+
+# Node.js etc.
+node_modules/
+/wrs-features/src/main/javascript/node/
+bower_components/
+.grunt-cache/
+jscs-output.json
+test-results.txt
+*test-results.xml
+
+# Vagrant
+.vagrant
+
+# OS X
+.DS_Store
+.DS_Store!
+
+# Other
+.tmp/
+.sass-cache/
+*.log
+**/classes/*
+catalina.*/
+
+# Custom
+*.rpm
+webbank-bundle.min.js
+webbank-bundle.min.js.map
+/environment/dev/script/config.bat
+dist/
+dest/
+webapp-dev/
+featurecache.json
+widget.conf.json
+/wrs-features/src/main/javascript/test/*.xml
+wspa.html
+/widgets/config.json
+
+/webbank/src/main/webapp/index.html
+/esb/db/*.properties
+/client-info-back/out/
+
+# Visual Studio Code
+.vscode
+bin/

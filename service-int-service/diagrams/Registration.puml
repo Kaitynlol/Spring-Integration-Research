@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+actor Client as client
+participant RegistrationController as controller
+participant RegistrationService as service
+participant RegistrationHandler as handler
+participant CdiRegistrationService as cdi
+queue  registrationChannel as registrationChannel
+queue  registrationRabbitChannel as registrationRabbitChannel
+queue  registration_queue as registration_queue
+
+
+queue cdiChannel as cdiChannel
+
+client-> controller: RegistrationRequest
+controller -> service: register client
+activate service
+alt successful case
+service -> service: prepare success response
+service -> registrationRabbitChannel
+registrationRabbitChannel -> registration_queue
+registration_queue -> registrationChannel
+else exceptional case
+service -> service: prepare bad response
+end
+service -> controller: response
+deactivate service
+controller-> client: accepted
+registrationChannel -> handler: handle registration request
+handler->cdi: register
+cdi->cdiChannel: ClientInfo
+@enduml
