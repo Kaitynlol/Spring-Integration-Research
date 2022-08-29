@@ -18,7 +18,7 @@
     "birthDay":"16.09.1994"
 }
 ```
-[Диаграмма последовательностей](E:\workspace\service-int\service-int-service\diagrams\Registration.puml) 
+[Диаграмма последовательностей](service-int-service/diagrams/Registration.puml) 
 
 ## Spring Integration notes
 Основные компоненты Spring Integration таковы.
@@ -38,7 +38,7 @@ MessageHeaders getHeaders();
 программных каналов и фильтров, очень похожа на команды операционной системы Unix. Для ее использования необходимы генераторы и потребители: генератор отправляет сообщение в канал передачи сообщений,
 а потребитель его получает 
 
-![alt text](E:\workspace\service-int\service-int-service\diagrams\MessageChannel.png)
+![alt text](service-int-service/diagrams/MessageChannel.png)
 
 
 - **Конечная точка сообщений (Message endpoint).** Фильтр, соединяющий код
